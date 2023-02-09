@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  ellsbergapp:
+    container_name: ellsbergapp
+    image: ellsbergapp
+    build: .
+    ports:
+      - "80:80"
+    environment:
+      - DATABASE_URL=postgresql://ellsberg_user:ellsberg_user@db:5432/ellsberg_db
+    depends_on:
+      - db
+  
+  db:
+    container_name: db
+    image: postgres:12
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_PASSWORD=ellsberg_user
+      - POSTGRES_USER=ellsberg_user
+      - POSTGRES_DB=ellsberg_db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+
+volumes:
+  pgdata: {}

@@ -1,0 +1,33 @@
+# Ellsberg-App Docker Compose
+
+Para ejecutar el servicio local de base de datos de  ```docker-compose```
+ejecutamos la siguiente instrucción:
+
+
+```
+docker compose up -d db
+```
+
+Para verificar el estatus del contenedor, ejecutamos 
+
+```
+docker ps -a
+```
+
+Check the database
+
+```
+sudo docker exec -it db psql -U ellsberg_user ellsberg_db
+```
+
+Run Python app
+
+```
+docker compose up --build ellsbergapp
+```
+
+Remove volumne 
+
+```
+docker compose down -v 
+```

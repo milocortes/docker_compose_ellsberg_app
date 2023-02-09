@@ -1,0 +1,14 @@
+alembic
+Flask
+Flask-Login
+Flask-Migrate
+Flask-SQLAlchemy
+Flask-WTF
+numpy
+pandas
+plotly
+psycopg2-binary
+SQLAlchemy
+tenacity
+Werkzeug
+WTForms
