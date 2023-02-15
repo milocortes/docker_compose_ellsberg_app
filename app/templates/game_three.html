@@ -41,7 +41,9 @@
     <div class="container">
     <div class="jumbotron">
       <h1 class="display-4">Paradoja de Ellsberg</h1>
-      <p class="lead">El experimento consiste en .. .</p>
+      <p class="lead">El experimento consiste en sies contenedores, cada uno de los cuales tiene un número conocido de pelotas rojas (señaladas en la segunda columna) y un número desconocido de pelotas verdes y azules, cuya suma total es la señalada en la tercer columna.</p>
+      <p class="lead">El programa elegirá al azar una pelota de cada contenedor, el participante debe tratar de adivinar de qué color será esta pelota y hacer su apuesta selecionando alguno de los los colores en la columna de apuestas "Bet". </p>
+      <p class="lead">La tabla azul a la derecha representa la probabilidad de que salga una pelota roja, azul o verde, suponiendo que exista la misma cantidad de pelotas azules y verdes, lo cual no es necesariamente cierto.</p>
       <hr class="my-4">
 
     </div>
@@ -67,10 +69,11 @@
               <th scope="col"> </th>
               <th scope="col"> </th>
               <th scope="col"> </th>
+              <th scope="col"> </th>
               <th class="bg-info", scope="col">DESICION </th>
               <th class="bg-info", scope="col">SUPPORT </th>
               <th class="bg-info", scope="col">TOOL </th>
-              <th scope="col"> </th>
+             
             </tr>
           </thead>
           <thead>
@@ -78,10 +81,10 @@
               <th scope="col">Contenedor</th>
               <th scope="col">Red numbers</th>
               <th scope="col">Blue or Green balls </th>
+              <th scope="col">Bet</th>
               <th class="table-info", scope="col">Expected Probability Red</th>
               <th class="table-info", scope="col">Expected Probability Blue</th>
               <th class="table-info", scope="col">Expected Probability Green</th>
-              <th scope="col">Bet</th>
             </tr>
           </thead>
           <tbody>
@@ -89,9 +92,6 @@
               <th scope="row">1</th> 
               <td>9</td>
               <td>27</td>
-              <td class="table-info">25%</td>
-              <td class="table-info">37.5%</td>
-              <td class="table-info">37.5%</td>
               <td>
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="containerOne" id="containerOne" value="1" required>
@@ -106,14 +106,14 @@
                   <label class="form-check-label" for="inlineRadio3">Green </label>
                 </div>
               </td>
+              <td class="table-info">25%</td>
+              <td class="table-info">37.5%</td>
+              <td class="table-info">37.5%</td>
             </tr>
             <tr>
               <th scope="row">2</th>
               <td>10</td>
               <td>26</td>
-              <td class="table-info">28%</td>
-              <td class="table-info">36%</td>
-              <td class="table-info">36%</td>
               <td>
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="containerTwo" id="containerTwo" value="1" required>
@@ -128,14 +128,14 @@
                   <label class="form-check-label" for="inlineRadio3">Green</label>
                 </div>
               </td>
+              <td class="table-info">28%</td>
+              <td class="table-info">36%</td>
+              <td class="table-info">36%</td>
             </tr>
             <tr>
               <th scope="row">3</th>
               <td>11</td>
               <td>25</td>
-              <td class="table-info">31%</td>
-              <td class="table-info">34.5%</td>
-              <td class="table-info">34.5%</td>
               <td>
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="containerThree" id="containerThree" value="1" required>
@@ -150,14 +150,14 @@
                   <label class="form-check-label" for="inlineRadio3">Green</label>
                 </div>
               </td>
+              <td class="table-info">31%</td>
+              <td class="table-info">34.5%</td>
+              <td class="table-info">34.5%</td>
             </tr>
             <tr>
               <th scope="row">4</th>
               <td>12</td>
               <td>24</td>
-              <td class="table-info">33.3%</td>
-              <td class="table-info">33.3%</td>
-              <td class="table-info">33.3%</td>
               <td>
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="containerFour" id="containerFour" value="1" required>
@@ -172,15 +172,15 @@
                   <label class="form-check-label" for="inlineRadio3">Green</label>
                 </div>
               </td>
+              <td class="table-info">33.3%</td>
+              <td class="table-info">33.3%</td>
+              <td class="table-info">33.3%</td>
               </td>
             </tr>
             <tr>
               <th scope="row">5</th>
               <td>13</td>
               <td>23</td>
-              <td class="table-info">36%</td>
-              <td class="table-info">32%</td>
-              <td class="table-info">32%</td>
               <td>
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="containerFive" id="containerFive" value="1" required>
@@ -195,14 +195,14 @@
                   <label class="form-check-label" for="inlineRadio3">Green</label>
                 </div>
               </td>
+              <td class="table-info">36%</td>
+              <td class="table-info">32%</td>
+              <td class="table-info">32%</td>
             </tr>
             <tr>
               <th scope="row">6</th>
               <td>14</td>
               <td>22</td>
-              <td class="table-info">39%</td>
-              <td class="table-info">30.5%</td>
-              <td class="table-info">30.5%</td>
               <td>
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="containerSix" id="containerSix" value="1" required>
@@ -217,6 +217,9 @@
                   <label class="form-check-label" for="inlineRadio3">Green</label>
                 </div>
               </td>
+              <td class="table-info">39%</td>
+              <td class="table-info">30.5%</td>
+              <td class="table-info">30.5%</td>
             </tr>
           </tbody>
         </table>
